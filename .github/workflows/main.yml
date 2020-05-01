@@ -1,33 +1,41 @@
-# This is a basic workflow to help you get started with Actions
+name: MISTER IASA GH-pages CI
 
-name: CI
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: 
+      - dev
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      - name: Make folders
+        run: |
+          mkdir process
+          mkdir build
+      - name: Clone branches
+        run: |
+          git clone "https://${{ secrets.GH_PAT }}@github.com/IASAStudentCouncil/mister_iasa.git" --branch dev --single-branch ./process
+          git clone "https://${{ secrets.GH_PAT }}@github.com/IASAStudentCouncil/mister_iasa.git" --branch gh-pages --single-branch ./build
+      - name: Generate static pages
+        run: |
+          cd ./process
+          npm install
+          npm run build
+      - run: cd ../
+      - run: cp -r ./process/build ./
+      - run: cd ./build
+      - name: Set git config and add changes
+        run: |
+          git config --global user.email "${GITHUB_ACTOR}@https://users.noreply.github.com/"
+          git config --global user.name "${GITHUB_ACTOR}"
+          git add --all
+        working-directory: ./build
+      - name: Push and send notification
+        run: |
+          COMMIT_MESSAGE="Update pages on $(date +'%Y-%m-%d %H:%M:%S')"
+          git diff-index --quiet --cached HEAD -- && echo "No changes!" && exit 0 || echo $COMMIT_MESSAGE
+          # Only if repo have changes
+          git commit -m "${COMMIT_MESSAGE}"
+          git push --force https://${{ secrets.GH_PAT }}@github.com/IASAStudentCouncil/mister_iasa.git
+        working-directory: ./build
