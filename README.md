@@ -1,4 +1,4 @@
- [![WAVE CYBER SPORT GH-pages CI](https://github.com/IASAStudentCouncil/mister_iasa/workflows/MISTER%20IASA%20GH-pages%20CI/badge.svg)]( https://iasastudentcouncil.github.io/wawe_cyber_sport/)
+ [![WAVE CYBER SPORT GH-pages CI](https://github.com/IASAStudentCouncil/wave_cyber_sport/workflows/CI/badge.svg?branch=master)]( https://iasastudentcouncil.github.io/wawe_cyber_sport/)
 
 # About
  Wave Landing Page  
