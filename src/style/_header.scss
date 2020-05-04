@@ -1,0 +1,94 @@
+.welcome{
+  background: url(../img/csgo.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height:100%;
+}
+
+h2 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 119px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.57);
+}
+
+.header-small{
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 50px;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.57);
+}
+
+.icons-wrap{
+  margin-top: 46px;
+}
+
+.icon-link{
+  margin-right: 10px;
+  img{
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.col-header{
+  margin-top: 96px;
+}
+
+.btn{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: white;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 25px;
+
+  &.btn-base{
+    background: linear-gradient(106.05deg, #D629FF 0%, #5EA1FF 100.1%);
+    height: 80px;
+    width: 270px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  &.btn-opacity{
+    width: 316px;
+    height: 95px;
+    background: linear-gradient(106.5deg, rgba(214, 41, 255, 0.71) 0%, rgba(94, 161, 255, 0.7) 100%);
+    font-size: 41px;
+    line-height: 50px;
+  }
+  &.btn-switch{
+    width: 355px;
+    height: 105px;
+    background: linear-gradient(106.48deg, rgba(255, 0, 255, 0.42) 0%, rgba(166, 89, 255, 0) 100%);
+  }
+}
+
+.btn-wrapper{
+  margin-top:180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.img-logo-button{
+  position: relative;
+  bottom: 60px;
+  left: 26px;
+}
+
+
+
