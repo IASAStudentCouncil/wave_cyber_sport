@@ -1,0 +1,93 @@
+#dates {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    font-family: Gilroy;
+    font-style: normal;
+    
+    & .row {
+        flex-direction: row;
+    }
+    
+    & .gr {
+        font-family: Gilroy-Regular;
+    }
+    
+    & h2 {
+        font-weight: bold;
+        font-size: 54px;
+        line-height: 67px;
+        text-shadow: none;
+        color: #000000;
+    }
+    
+    & select {
+        border-radius: 6px;
+        text-align-last: center;
+        width: 147px;
+        height: 43px;
+        border: 3px solid black;
+        box-shadow: 0 4px 4px rgba(0,0,0,.57);
+        font-weight: 900;
+        
+        & option {
+            text-align: center;
+        }
+    }
+    
+    & .dates {
+        margin-top: 150px;
+    }
+
+    & p.number {
+        text-align: center;
+        font-size: 64px;
+        line-height: 79px;
+        margin-bottom: 0;
+    }
+
+    & p.month {
+        text-align: center;
+        font-size: 36px;
+        line-height: 43px;
+        padding-left: 1.5rem;
+    } 
+    
+    & .prog-bar {
+        margin-top: 100px;
+        padding-left: 43px;
+    }
+    
+    & img {
+        width: 97.5%;
+    }
+    
+    & .descriptions {
+        margin-top: 100px;
+    }
+    
+    & .date {
+        margin-left: 50px;
+        
+        &:last-child {
+            margin-right: -40px;
+        }
+    }
+    
+    & .ws-no {
+        white-space: nowrap;
+    }
+    
+    & .date-heading {
+        font-weight: 900;
+        font-size: 38px;
+        line-height: 46px;
+    }
+    
+    & .date-desc {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    
+}
+
