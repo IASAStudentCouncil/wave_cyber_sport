@@ -28,6 +28,10 @@
         }
     }
     
+    #for-select {
+        transition: opacity ease 0.25s;
+    }
+    
     & .dates {
         margin-top: 100px;
     }
