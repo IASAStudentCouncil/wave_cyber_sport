@@ -126,7 +126,7 @@ gulp.task('fonts:build', function() {
 });
 
 // обработка картинок
-gulp.task('image:build', function() {
+gulp.task('img:build', function() {
     gulp.src(path.src.img) // путь с исходниками картинок
         .pipe(cache(imagemin([ // сжатие изображений
             imagemin.gifsicle({ interlaced: true }),
@@ -156,7 +156,7 @@ gulp.task('build', gulp.parallel(
     'css:build',
     'js:build',
     'fonts:build',
-    'image:build'
+    'img:build'
 ));
 
 
@@ -165,7 +165,7 @@ gulp.task('watch', function() {
     gulp.watch(path.watch.html, gulp.series('html:build'));
     gulp.watch(path.watch.css, gulp.series('css:build'));
     gulp.watch(path.watch.js, gulp.series('js:build'));
-    gulp.watch(path.watch.img, gulp.series('image:build'));
+    gulp.watch(path.watch.img, gulp.series('img:build'));
     gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
 });
 
