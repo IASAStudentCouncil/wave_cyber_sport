@@ -1,16 +1,8 @@
 #dates {
-    margin-top: 150px;
+    margin-top: 120px;
     margin-bottom: 150px;
     font-family: Gilroy;
     font-style: normal;
-    
-    & .row {
-        flex-direction: row;
-    }
-    
-    & .gr {
-        font-family: Gilroy-Regular;
-    }
     
     & h2 {
         font-weight: bold;
@@ -18,7 +10,7 @@
         line-height: 67px;
         text-shadow: none;
         text-transform: none;
-        color: #000000;
+        color: #000;
     }
     
     & select {
@@ -37,7 +29,7 @@
     }
     
     & .dates {
-        margin-top: 150px;
+        margin-top: 100px;
     }
 
     & p.number {
@@ -55,9 +47,9 @@
     } 
     
     & .prog-bar {
-        margin-top: 100px;
+        margin-top: 66px;
         padding-left: 43px;
-        margin-bottom: 100px;
+        margin-bottom: 66px;
     }
     
     & img {
@@ -70,10 +62,6 @@
         &:last-child {
             margin-right: -40px;
         }
-    }
-    
-    & .ws-no {
-        white-space: nowrap;
     }
     
     & .date-heading {
@@ -89,7 +77,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     #dates {
         & h2 {
             line-height: 65px;
@@ -138,5 +126,13 @@
             }
         }
     }
+}
+
+.ws-no {
+    white-space: nowrap;
+}
+
+.gr {
+    font-family: Gilroy-Regular;
 }
 
