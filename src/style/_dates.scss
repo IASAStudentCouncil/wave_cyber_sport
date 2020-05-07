@@ -17,10 +17,12 @@
         font-size: 54px;
         line-height: 67px;
         text-shadow: none;
+        text-transform: none;
         color: #000000;
     }
     
     & select {
+        margin-top: 12px;
         border-radius: 6px;
         text-align-last: center;
         width: 147px;
@@ -55,14 +57,11 @@
     & .prog-bar {
         margin-top: 100px;
         padding-left: 43px;
+        margin-bottom: 100px;
     }
     
     & img {
         width: 97.5%;
-    }
-    
-    & .descriptions {
-        margin-top: 100px;
     }
     
     & .date {
@@ -88,6 +87,56 @@
         font-size: 24px;
         line-height: 29px;
     }
-    
+}
+
+@media (max-width: 1200px) {
+    #dates {
+        & h2 {
+            line-height: 65px;
+        }
+        
+        & select {
+            width: 105px;
+            height: 31.43px;
+        }
+        
+        & p.number {
+            font-size: 35px;
+            line-height: 43px;
+        }
+        
+        & p.month {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        
+        & p.date-heading {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        
+        & p.date-desc {
+            font-size: 15px;
+            line-height: 18px;
+        }
+        
+        & .prog-bar {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            padding-left: 33px;
+        }
+        
+        & img {
+            width: 100%;
+        }
+        
+        & .date {
+            margin-left: 40px;
+
+            &:last-child {
+                margin-right: -30px;
+            }
+        }
+    }
 }
 
