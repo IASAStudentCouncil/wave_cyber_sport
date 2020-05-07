@@ -15,8 +15,8 @@ jobs:
           mkdir build
       - name: Clone branches
         run: |
-          git clone "https://${{ GH_PAT:-"x-access-token:$GITHUB_TOKEN"}}@github.com/IASAStudentCouncil/wave_cyber_sport.git" --branch dev --single-branch ./process
-          git clone "https://${{GH_PAT:-"x-access-token:$GITHUB_TOKEN"}}@github.com/IASAStudentCouncil/wave_cyber_sport.git" --branch gh-pages --single-branch ./build
+          git clone "https://${{ secrets.GITHUB_TOKEN}}@github.com/IASAStudentCouncil/wave_cyber_sport.git" --branch dev --single-branch ./process
+          git clone "https://${{ secrets.GITHUB_TOKEN}}@github.com/IASAStudentCouncil/wave_cyber_sport.git" --branch gh-pages --single-branch ./build
       - name: Generate static pages
         run: |
           cd ./process
@@ -37,5 +37,5 @@ jobs:
           git diff-index --quiet --cached HEAD -- && echo "No changes!" && exit 0 || echo $COMMIT_MESSAGE
           # Only if repo have changes
           git commit -m "${COMMIT_MESSAGE}"
-          git push --force https://${{GH_PAT:-"x-access-token:$GITHUB_TOKEN"}}@github.com/IASAStudentCouncil/wave_cyber_sport.git
+          git push --force https://${{ secrets.GITHUB_TOKEN}}@github.com/IASAStudentCouncil/wave_cyber_sport.git
         working-directory: ./build
