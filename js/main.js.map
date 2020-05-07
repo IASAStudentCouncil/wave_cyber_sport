@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["main.js"],"sourcesContent":[""],"file":"main.js"}
+{"version":3,"names":[],"mappings":"","sources":["main.js"],"sourcesContent":["const datesInfo = document.getElementById('for-select')\nconst select = document.getElementById('select')\n\nselect.addEventListener('input', fakeChange)\n\nfunction fakeChange() {\n    datesInfo.style.opacity = 0\n    setTimeout(() => datesInfo.style.opacity = 1, 500)\n}"],"file":"main.js"}

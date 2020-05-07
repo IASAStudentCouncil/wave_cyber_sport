@@ -74,53 +74,97 @@
                     <h2 class="ws-no">Важные даты</h2>
                 </div>
                 <div class="col col-2">
-                    <select name="game" id="1">
+                    <select name="game" id="select">
                         <option value="csgo">CS:GO</option>
                         <option value="dota2">Dota 2</option>
                     </select>
                 </div>
             </div>
-            <div class="row justify-content-between dates">
-                <div class="col col-3">
-                    <p class="number">10-28</p>
-                    <p class="month gr">Июль, 2020</p>
+            <div id="for-select">
+                <div class="row justify-content-between dates">
+                    <div class="col col-3">
+                        <p class="number">10-28</p>
+                        <p class="month gr">Июль, 2020</p>
+                    </div>
+                    <div class="col col-3">
+                        <p class="number">14-88</p>
+                        <p class="month gr">Июнь, 2020</p>
+                    </div>
+                    <div class="col col-3">
+                        <p class="number">73-73</p>
+                        <p class="month gr">Август, 2020</p>
+                    </div>
                 </div>
-                <div class="col col-3">
-                    <p class="number">14-88</p>
-                    <p class="month gr">Июнь, 2020</p>
+                <div class="row prog-bar">
+                    <div class="col col-10">
+                        <img src="../img/dates_progress.png" alt="progress bar">
+                    </div>
                 </div>
-                <div class="col col-3">
-                    <p class="number">73-73</p>
-                    <p class="month gr">Август, 2020</p>
-                </div>
-            </div>
-            <div class="row prog-bar">
-                <div class="col col-10">
-                    <img src="../img/dates_progress.png" alt="progress bar">
-                </div>
-            </div>
-            <div class="row justify-content-between">
-                <div class="col col-3 date">
-                    <p class="date-heading gr">Регистрация</p>
-                    <p class="date-desc gr"></p>
-                </div>
-                <div class="col col-3 date">
-                    <p class="date-heading gr ws-no">Групповой этап</p>
-                    <p class="date-desc gr ws-no">30 команд в двух дисциплинах<br>сразятся в групповой стадии<br>кибертурнира WAVE в формате<br>best of 1. После группового<br>этапа турнир покинут 6 команд.</p>
-                </div>
-                <div class="col col-3 date">
-                    <p class="date-heading gr">Плей-офф</p>
-                    <p class="date-desc gr ws-no">12 лучших команд в двух<br>дисциплинах сразятся в<br>стадии плей-офф<br>кибертурнира WAVE в<br>серии best of 3. </p>
+                <div class="row justify-content-between">
+                    <div class="col col-3 date">
+                        <p class="date-heading gr">Регистрация</p>
+                        <p class="date-desc gr"></p>
+                    </div>
+                    <div class="col col-3 date">
+                        <p class="date-heading gr ws-no">Групповой этап</p>
+                        <p class="date-desc gr ws-no">30 команд в двух дисциплинах<br>сразятся в групповой стадии<br>кибертурнира WAVE в формате<br>best of 1. После группового<br>этапа турнир покинут 6 команд.</p>
+                    </div>
+                    <div class="col col-3 date">
+                        <p class="date-heading gr">Плей-офф</p>
+                        <p class="date-desc gr ws-no">12 лучших команд в двух<br>дисциплинах сразятся в<br>стадии плей-офф<br>кибертурнира WAVE в<br>серии best of 3. </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="subscribe">
-        testtesttesttestte
+        <div id="skew"></div>
+        <div class="content">
+           <div class="container">
+               <div class="row">
+                <div class="col col-12">
+                    <h2 class="ws-no">Подписывайся<br>на наш Телеграм-канал</h2>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-lg-5 left">
+                        <button class="btn btn-base">Подписаться</button>
+                        <p class="text gr ws-no">WAVE — борьба за победу.<br>Чемпионская гонка в трансляциях<br>и статистике — будь в курсе всех<br>событий!</p>
+                        <div class="icons-wrap">
+                            <a href="https://www.instagram.com/koval.2001/?hl=ru" class="icon-link"><img src="../img/tg.svg" alt="telegram"></a>
+                            <a href="https://www.instagram.com/koval.2001/?hl=ru" class="icon-link"><img src="../img/insta.svg" alt="instagram"></a>
+                            <a href="https://www.instagram.com/koval.2001/?hl=ru" class="icon-link"><img src="../img/discord.svg" alt="discord"></a>
+                            <a href="https://www.instagram.com/koval.2001/?hl=ru" class="icon-link"><img src="../img/twitch.svg" alt="twitch"></a>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-7 right">
+                        <img src="../img/ogre-magi.png" alt="ogre magi">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer>
-        <a>Footer</a>
-    
+    <footer id="footer" class="no">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col col-3">
+                    <p>wave 2020</p>
+                </div>
+                <div class="col col-3">
+                    <div class="logo">
+                        <img src="../img/logo.png" alt="Wave logo">                 
+                    </div>
+                </div>
+                <div class="col col-3">
+                    <div class="icons-wrap">
+    					<a href="https://www.instagram.com/koval.2001/?hl=ru" class="icon-link"><img src="../img/tg.svg" alt="telegram"></a>
+    					<a href="https://www.instagram.com/koval.2001/?hl=ru" class="icon-link"><img src="../img/insta.svg" alt="instagram"></a>
+    					<a href="https://www.instagram.com/koval.2001/?hl=ru" class="icon-link"><img src="../img/discord.svg" alt="discord"></a>
+    					<a href="https://www.instagram.com/koval.2001/?hl=ru" class="icon-link"><img src="../img/twitch.svg" alt="twitch"></a>
+    				</div>
+                </div>     
+            </div>
+        </div>
     </footer>
     <script src="js/main-min.js"></script>
 </body>
