@@ -101,9 +101,12 @@ h2 {
 
 @media (max-width:$breakpoint-mobile){
   .welcome{
-    background:url(../img/mobile_header.jpg);
+    background:url(../img/mobile_header.jpg)!important;
     background-size:cover;
     height:100vh;
+  }
+  .col-header{
+    padding-right: 0px!important;
   }
 }
 
@@ -168,9 +171,14 @@ h2 {
 
 @media (max-width:$breakpoint-tablet-small){
   .col-header{
-    margin-top: 218px;
+    margin-top: 99px;
+  }
+  .button-wrap{
+    margin-top: 30%;
   }
 }
+
+
 
 
 
