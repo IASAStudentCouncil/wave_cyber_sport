@@ -80,9 +80,44 @@ p{
   height: 80%;
 }
 
+.row-100{
+  height:100%
+}
+
 .rect-wrap{
   height: 70%;
   display: flex;
   flex-direction: column;
   align-content: space-between;
+}
+
+@media (max-width:$breakpoint-tablet){
+  .about{
+    background-size: 45%;
+    height: 90vh;
+  }
+  .col-text{
+    height:200px;
+  }
+  .row-100{
+    height:65%;
+  }
+  p.f35{
+    margin-bottom: 0px;
+    max-width:476px;
+  }
+  .rect-wrap{
+    height: 100%;
+  }
+  .rect-text-wrapper{
+    width: 479px;
+    height: 139px;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 20px 25px 0px 45px;
+  }
+  p.f30{
+    font-size: 20px;
+    line-height: 25px;
+  }
 }

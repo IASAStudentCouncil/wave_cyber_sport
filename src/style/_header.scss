@@ -90,5 +90,87 @@ h2 {
   left: 26px;
 }
 
+.button-wrap{
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.img-logo-tablet{
+  display: none;
+}
+
+@media (max-width:$breakpoint-mobile){
+  .welcome{
+    background:url(../img/mobile_header.jpg);
+    background-size:cover;
+    height:100vh;
+  }
+}
+
+@media (max-width:$breakpoint-tablet){
+  .welcome{
+    background: url(../img/tablet_header.jpg) center center;
+    background-size:cover;
+    height:100vh;
+  }
+  .btn-switch{
+    display: none;
+  }
+  h2{
+    font-size: 50px;
+    line-height:55px;
+    margin-bottom: 0px;
+  }
+  .header-small{
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .img-logo{
+    display: none;
+  }
+  .img-logo-tablet{
+    display: flex;
+    margin-left: auto;
+  }
+  .p-logo, .p-logo-none{
+    margin-bottom:0;
+  }
+  .col-header{
+    margin-top: 20%;
+    padding-right: 125px;
+  }
+  .icons-wrap{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 36px;
+  }
+  .button-wrap, .btn-wrapper{
+    justify-content: center;
+  }
+  .button-wrap{
+    margin-top: 50%;
+  }
+  .btn-wrapper{
+    margin-top:55px;
+  }
+  .btn.btn-base{
+    width: 348px;
+    height:76px;
+    font-size: 35px;
+  }
+  .btn.btn-opacity{
+    width: 236px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width:$breakpoint-tablet-small){
+  .col-header{
+    margin-top: 218px;
+  }
+}
+
 
 
