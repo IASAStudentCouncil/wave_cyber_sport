@@ -1,8 +1,7 @@
 #subscribe {
     background: #000;
-    height: 100vh;
     width: 100%;
-    position: absolute;
+    position: relative;
     
     & #skew {
         position: absolute;
@@ -28,6 +27,15 @@
         text-shadow: none;
         text-transform: none;
         color: #fff;
+    }
+    
+    & button {
+        color: #000;
+        
+        &:hover {
+            color: #fff;
+            background: linear-gradient(106.05deg, #5ea1ff 0%, #d629ff 100%);
+        }
     }
     
     & .left {
