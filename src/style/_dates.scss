@@ -11,10 +11,12 @@
         text-shadow: none;
         text-transform: none;
         color: #000;
+        text-align: center;
     }
     
     & select {
-        margin-top: 12px;
+        display: block;
+        margin: 12px auto 0 auto;
         border-radius: 6px;
         text-align-last: center;
         width: 147px;
@@ -26,6 +28,10 @@
         & option {
             text-align: center;
         }
+    }
+    
+    & .mob-only {
+        display: none;
     }
     
     #for-select {
@@ -50,14 +56,17 @@
         padding-left: 1.5rem;
     } 
     
-    & .prog-bar {
-        margin-top: 66px;
-        padding-left: 43px;
-        margin-bottom: 66px;
-    }
-    
-    & img {
-        width: 97.5%;
+    & .dsk-only {
+        
+        & img {
+            width: 97.5%;
+        }
+        
+        & .prog-bar {
+            margin-top: 66px;
+            padding-left: 43px;
+            margin-bottom: 66px;
+        }
     }
     
     & .date {
@@ -92,34 +101,37 @@
             height: 31.43px;
         }
         
-        & p.number {
-            font-size: 35px;
-            line-height: 43px;
-        }
-        
-        & p.month {
-            font-size: 20px;
-            line-height: 24px;
-        }
-        
-        & p.date-heading {
-            font-size: 20px;
-            line-height: 24px;
-        }
-        
-        & p.date-desc {
-            font-size: 15px;
-            line-height: 18px;
-        }
-        
-        & .prog-bar {
-            margin-bottom: 20px;
-            margin-top: 20px;
-            padding-left: 33px;
-        }
-        
-        & img {
-            width: 100%;
+        & .dsk-only {
+                 
+            & img {
+                width: 100%;
+            }
+            
+            & p.date-heading {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            
+            & p.date-desc {
+                font-size: 15px;
+                line-height: 18px;
+            }
+            
+            & .prog-bar {
+                margin-bottom: 20px;
+                margin-top: 20px;
+                padding-left: 33px;
+            }
+            
+            & p.number {
+                font-size: 35px;
+                line-height: 43px;
+            }
+
+            & p.month {
+                font-size: 20px;
+                line-height: 24px;
+            }
         }
         
         & .date {
@@ -127,6 +139,70 @@
 
             &:last-child {
                 margin-right: -30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #dates {
+        
+        & .dsk-only {
+            display: none;
+        }
+        
+        & select {
+            width: 20%;
+            height: 100%;
+        }
+        
+        & .mob-only {
+            display: flex;
+            margin-top: 40px;
+            
+            & .dates-left {
+                padding-right: 70px;
+            }
+            
+            & .prog-bar {
+                top: 20px;
+                
+                img {
+                    height: 75%;
+                }
+            }
+            
+            & p {
+                width: 120%;
+                text-align: end;
+                
+                &.date-heading:nth-of-type(3) {
+                    margin-top: 310px;
+                }
+                
+                &.date-desc:nth-of-type(4) {
+                    margin-left: -30%;
+                    width: 150%;
+                }
+                
+                &.date-heading:nth-of-type(5) {
+                    margin-top: 147px;
+                }
+                
+                &.number:nth-of-type(2) {
+                    margin-top: 252px;
+                }
+                
+                &.number:nth-of-type(3) {
+                    margin-top: 252px;
+                }
+                
+                &.number {
+                    text-align: left;
+                    padding-left: 0;
+                    font-size: 45px;
+                    line-height: 50px;    
+                }
             }
         }
     }
