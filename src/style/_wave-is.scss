@@ -35,6 +35,32 @@ h5{
     line-height: 42px;
 }
 
+.row-wave{
+    background-color: white;
+    height: 150px;
+    border-radius: 0px 30px 30px 0px;
+    width: 50%;
+}
+.row-left{
+    background:rgba(0,0,0,1.0) url(../img/left_desktop_wave.jpg);
+    //height: 100%; /* You must set a specified height */
+    background-position: right; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 30%;
+    height: 150px;
+    position:relative;
+    right: 40%;
+
+}
+
+.row-wave.right{
+    margin-left: auto;
+    background-color: white;
+    height: 150px;
+    border-radius: 30px 0px 0px 30px;
+    width: 50%;
+}
+
 
 @media (max-width:$breakpoint-tablet-small){
     #wave-is{
