@@ -1,6 +1,6 @@
 .about{
   background: url(../img/left.svg);
-  height: 100%; /* You must set a specified height */
+  //height: 100%; /* You must set a specified height */
   background-position: left; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: 25%;
@@ -107,6 +107,23 @@ p{
     max-width:476px;
   }
   .rect-wrap{
+    height: 70%;
+  }
+  .rect-text-wrapper{
+    width: 100%;
+    height: 139px;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 20px 25px 0px 45px;
+  }
+  p.f30{
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width:$breakpoint-tablet-small){
+  .rect-wrap{
     height: 100%;
   }
   .rect-text-wrapper{
@@ -119,5 +136,46 @@ p{
   p.f30{
     font-size: 20px;
     line-height: 25px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile){
+  .about {
+    background: url(../img/left_mob.svg) no-repeat center center;
+    background-size: 100%;
+    background-position: 0px 80px;
+    height: 100vh;
+  }
+  .col-text{
+    height: 112px;
+  }
+  h3{
+    margin-top: 50px!important;
+    font-size: 30px!important;
+    line-height: 37px!important;
+    //margin-bottom: 0px!important;
+  }
+  .f35{
+    font-size: 18px!important;
+    line-height: 22px!important;
+    padding-left: 46px!important;
+    padding-right: 70px!important;
+  }
+  p.f30{
+    font-size: 15px!important;
+    line-height: 19px!important;
+  }
+  .rect-text-wrapper{
+    height: 90px;
+    width: 310px;
+    padding-left: 30px;
+    padding-top: 17px;
+    padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 70px!important;
+    border:solid 3px transparent!important;
+    background-clip: border-box!important;
+    margin-bottom: 50px;
   }
 }

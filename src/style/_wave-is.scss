@@ -1,6 +1,49 @@
 #wave-is { //test
+    margin-top: 100px;
     color: white;
-    background: black;
-    height: 600px;
-    transform: skewY(4deg);
+    height: 100vh;
+    //transform: skewY(4deg);
+    background:rgba(0,0,0,1.0) url(../img/right.svg);
+    //height: 100%; /* You must set a specified height */
+    background-position: right; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 20%;
+}
+
+.gradient-text {
+    background: linear-gradient(106.81deg, #D629FF 0%, #5EA1FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #D629FF;
+    font-family: Gilroy;
+    //display: table;
+    //margin: 20px auto;
+}
+
+.pink{
+    font-family: Gilroy;
+    color: $mypink;
+}
+
+.blue{
+    font-family: Gilroy;
+    color: $myblue;
+}
+
+h5{
+    font-size: 34px;
+    line-height: 42px;
+}
+
+
+@media (max-width:$breakpoint-tablet-small){
+    #wave-is{
+        margin-top: 135px;
+    }
+}
+
+@media (max-width: $breakpoint-mobile){
+    #wave-is{
+        margin-top: 50px;
+    }
 }
