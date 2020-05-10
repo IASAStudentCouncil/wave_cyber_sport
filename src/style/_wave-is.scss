@@ -2,12 +2,14 @@
     margin-top: 100px;
     color: white;
     height: 100vh;
+    min-height: 110vh;
     //transform: skewY(4deg);
     background:rgba(0,0,0,1.0) url(../img/right.svg);
     //height: 100%; /* You must set a specified height */
     background-position: right; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: 20%;
+    background-size: 21%;
+    z-index:10;
 }
 
 .gradient-text {
@@ -33,43 +35,197 @@
 h5{
     font-size: 34px;
     line-height: 42px;
+    margin-bottom: 70px;
 }
 
 .row-wave{
     background-color: white;
-    height: 150px;
-    border-radius: 0px 30px 30px 0px;
-    width: 50%;
+    //height: 150px;
+    border-radius: 0px 150px 150px 0px;
+    width: 60%;
+    height: 300px;
+    position: relative;
+    z-index:2;
 }
 .row-left{
-    background:rgba(0,0,0,1.0) url(../img/left_desktop_wave.jpg);
+    background: url(../img/left_desktop_wave.jpg);
     //height: 100%; /* You must set a specified height */
     background-position: right; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: 30%;
-    height: 150px;
-    position:relative;
-    right: 40%;
-
+    background-size: 120%;
+    top: 180px;
+    height: 256px;
+    width: 415px;
+    position:absolute;
+    right: 20%;
+    z-index:1;
+    border-radius: 30px;
 }
 
 .row-wave.right{
     margin-left: auto;
     background-color: white;
-    height: 150px;
-    border-radius: 30px 0px 0px 30px;
-    width: 50%;
+    border-radius: 150px 0px 0px 150px;
+    width: 60%;
+    height: 300px;
+    position: relative;
+    margin-top: 74px;
+    z-index:2;
+    //right: 0px;
 }
 
+.row-right{
+    background: url(../img/right_desktop_wave.jpg);
+    //height: 100%; /* You must set a specified height */
+    background-position: right; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 120%;
+    top: 460px;
+    height: 256px;
+    width: 415px;
+    position:absolute;
+    left: 20%;
+    z-index:1;
+    border-radius: 30px;
+}
+
+.f26{
+    font-size: 26px;
+    line-height: 32px;
+    color: #000000;
+    margin-left: 10%;
+    margin-right: 15%;
+    margin-top: 6%;
+}
+
+.f26.f26left{
+    margin-top: 3%;
+}
+
+.fbold{
+    font-family: Gilroy;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    #wave-is{
+        min-height: 70vh;
+        height: 40vh;
+        background-size: 33%;
+    }
+    .row-wave, .row-wave.right{
+        width: 70%;
+        height:190px;
+    }
+    .row-wave .row .left{
+        padding-top: 55px!important;
+    }
+    .row-wave.right{
+        margin-top: 167px;
+    }
+    #wave-right{
+        padding-top: 24px!important;
+    }
+    .f26{
+        margin-top: 0px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .row-left, .row-right{
+        width: 242px;
+        height: 150px;
+    }
+    .row-left{
+        right: 15%;
+    }
+    .row-right{
+        left: 15%;
+        top: 440px;
+    }
+}
 
 @media (max-width:$breakpoint-tablet-small){
     #wave-is{
         margin-top: 135px;
+        height: 99vh;
+        background-size: 49%;
+    }
+    .row-wave .row .left {
+        padding-top: 45px!important;
+    }
+    .f26.f26left {
+        margin-right: 10%;
+        margin-top: 1%;
+        margin-left: 18%;
     }
 }
 
 @media (max-width: $breakpoint-mobile){
     #wave-is{
         margin-top: 50px;
+        background:#000000 url(../img/left_mob.svg) no-repeat center center;
+        background-size: 100%;
+        background-position: 0px 90px;
+        height: 106vh;
+    }
+    h5{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .f26{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .row-wave{
+        margin-top: 70px;
+        height: 100px;
+        width: 80%;
+    }
+    .row-wave.right{
+        height: 120px;
+        width: 80%;
+    }
+    .row-wave .row .left {
+        padding-top: 10px!important;
+    }
+    #wave-right{
+        padding-top: 0px!important;
+    }
+    .f26.f26left{
+        text-align: right;
+        margin-right: 0px;
+        margin-top: 3%;
+    }
+    .row-left, .row-right{
+        width: 194px;
+        height: 120px;
+    }
+    .row-left{
+        right: 7%;
+        top: 245px;
+    }
+    .row-right{
+        left: 7%;
+        top: 530px;
+    }
+    .row.head{
+        height: 50px;
+    }
+}
+
+@media (max-width: $breakpoint-mobile-small) {
+    #wave-is{
+        height: 120vh;
+    }
+    .row-wave{
+        width: 90%;
+    }
+    .row-left{
+        top: 197px;
+    }
+    .row-right{
+        top: 495px;
+    }
+    .row-wave.right{
+        height: 130px;
     }
 }

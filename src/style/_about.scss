@@ -144,7 +144,7 @@ p{
     background: url(../img/left_mob.svg) no-repeat center center;
     background-size: 100%;
     background-position: 0px 80px;
-    height: 100vh;
+    height: 122vh;
   }
   .col-text{
     height: 112px;
@@ -177,5 +177,19 @@ p{
     border:solid 3px transparent!important;
     background-clip: border-box!important;
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-small){
+  p.f35{
+    padding-right: 30px!important;
+  }
+  .rect-text-wrapper{
+    width: 285px;
+  }
+  h5{
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
   }
 }
